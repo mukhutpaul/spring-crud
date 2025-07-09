@@ -15,12 +15,12 @@ public class Client {
     private int id;
 
     private String firstName;
-    private String lastNam;
+    private String lastName;
 
     @Column(nullable = false, unique = true)
     private String email;
 
-    private String photo;
+    private String phone;
 
     private String adresse;
     private String status;
