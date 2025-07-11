@@ -51,7 +51,7 @@ public class ClientController {
         BindingResult result
     ){
 
-        if(clientRepository.findByEmail(clientDto.getEmail()) !=null){
+        if(clientRepository.findByEmail(clientDto.getEmail()) != null){
             result.addError(new FieldError("clientDto","email", clientDto.getEmail(),
             false, null,null, "Email adresse is already used")
          );
@@ -155,7 +155,7 @@ public class ClientController {
         Client client = clientRepository.findById(id).orElse(null);
 
         if(client != null) {
-            clientRepo.delete(cliet);
+            clientRepository.delete(client);
         }
 
         return "redirect:/clients";
