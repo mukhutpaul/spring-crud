@@ -30,9 +30,7 @@ public class ClientController {
     @GetMapping({"","/"})
     public String getClients(Model model) {
         var clients =clientRepository.findAll(Sort.by(Sort.Direction.DESC,"id"));
-        
         model.addAttribute("clients", clients);
-
         return "clients/index";
     }
 
@@ -48,7 +46,7 @@ public class ClientController {
     @PostMapping("/create")
     public String createClient(
         @Valid @ModelAttribute ClientDto clientDto,
-        BindingResult result
+         BindingResult result
     ){
 
         if(clientRepository.findByEmail(clientDto.getEmail()) != null){
@@ -57,9 +55,9 @@ public class ClientController {
          );
         }
 
-        if(result.hasErrors()){
-            return "clients/create";
-        }
+         if(result.hasErrors()){
+             return "clients/create";
+         }
 
         Client client = new Client();
 
@@ -144,9 +142,6 @@ public class ClientController {
             return "client/edit";
 
         }
-    
-
-
         return "redirect:/clients";
     }
 

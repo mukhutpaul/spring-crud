@@ -9,6 +9,7 @@ import lombok.*;
 @Table(name = "clients")
 @Getter
 @Setter
+@ToString
 public class Client {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +26,6 @@ public class Client {
     private String adresse;
     private String status;
     private Date createdAt;
+
 
 }
