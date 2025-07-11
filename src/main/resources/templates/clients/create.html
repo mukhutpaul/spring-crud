@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Client Manager</title>
-    <link th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.css}">
   </head>
   <body>
     
@@ -71,7 +71,7 @@
                  <div class="row mb-3">
                  <label class="col-sm-4 col-form-label">Status</label>
                     <div class="col-sm-8">
-                        <select class="form-select" th:field="${clientDto.status}">
+                        <select class="form-control" th:field="${clientDto.status}">
 
                             <option value='New'>New</option>
                             <option value='Permanent'>Permanent</option>
@@ -104,6 +104,6 @@
        
     </div>
 
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script rel="stylesheet" th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
   </body>
 </html>
